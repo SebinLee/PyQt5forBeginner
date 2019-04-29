@@ -73,9 +73,9 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QPushButton" name="btn_displayPlainTextEdit">
+     <widget class="QPushButton" name="btn_printPlainTextEdit">
       <property name="text">
-       <string>DIsplay Plain Text Edit</string>
+       <string>Print Plain Text Edit</string>
       </property>
      </widget>
     </item>
@@ -88,7 +88,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -102,11 +102,11 @@
      <widget class="QTextEdit" name="textedit_Test"/>
     </item>
     <item>
-     <widget class="QPlainTextEdit" name="ptextedit_Test"/>
+     <widget class="QPlainTextEdit" name="plaintextedit_Test"/>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>410</x>
@@ -117,9 +117,9 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="btn_displayTextEdit">
+     <widget class="QPushButton" name="btn_printTextEdit">
       <property name="text">
-       <string>Display Text Edit</string>
+       <string>Print Text Edit</string>
       </property>
      </widget>
     </item>
