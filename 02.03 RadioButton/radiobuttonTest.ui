@@ -16,9 +16,9 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>130</x>
      <y>60</y>
-     <width>110</width>
+     <width>131</width>
      <height>158</height>
     </rect>
    </property>
@@ -55,58 +55,6 @@
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QRadioButton" name="rad4">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>172</y>
-     <width>111</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>RadioButton4</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="rad1">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>106</y>
-     <width>111</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>RadioButton1</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="rad2">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>128</y>
-     <width>111</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>RadioButton2</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="rad3">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>150</y>
-     <width>111</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>RadioButton3</string>
-   </property>
   </widget>
  </widget>
  <resources/>
