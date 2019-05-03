@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>656</width>
-    <height>459</height>
+    <width>702</width>
+    <height>276</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,93 +26,13 @@
     <string>Text Edit</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>30</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Plain Text Edit</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="textBrowser">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>290</y>
-     <width>371</width>
-     <height>151</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>270</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Display Text</string>
-   </property>
-  </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>150</y>
-     <width>221</width>
-     <height>66</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QPushButton" name="btn_printPlainTextEdit">
-      <property name="text">
-       <string>Print Plain Text Edit</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btn_clearPlainTextEdit">
-      <property name="text">
-       <string>Clear Plain Text Edit</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
+     <x>400</x>
      <y>50</y>
-     <width>371</width>
-     <height>194</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QTextEdit" name="textedit_Test"/>
-    </item>
-    <item>
-     <widget class="QPlainTextEdit" name="plaintextedit_Test"/>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>70</y>
-     <width>221</width>
-     <height>66</height>
+     <width>271</width>
+     <height>207</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -130,7 +50,56 @@
       </property>
      </widget>
     </item>
+    <item>
+     <widget class="QPushButton" name="btn_setFont">
+      <property name="text">
+       <string>Set Font</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_setFontItalic">
+      <property name="text">
+       <string>Set Font Italic</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_setFontColor">
+      <property name="text">
+       <string>Set Font Color Red</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="btn_fontSizeUp">
+        <property name="text">
+         <string>Font Size Up</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_fontSizeDown">
+        <property name="text">
+         <string>Font Size Down</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
    </layout>
+  </widget>
+  <widget class="QTextEdit" name="textedit_Test">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>369</width>
+     <height>211</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>
