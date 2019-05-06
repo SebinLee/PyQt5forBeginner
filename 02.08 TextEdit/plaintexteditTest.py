@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 
-form_class = uic.loadUiType("texteditTest.ui")[0]
+form_class = uic.loadUiType("plaintexteditTest.ui")[0]
 
 class WindowClass(QMainWindow, form_class) :
     def __init__(self) :
@@ -12,9 +12,7 @@ class WindowClass(QMainWindow, form_class) :
         #PlainTextEdit과 관련된 버튼에 기능 연결
         self.btn_printPlainTextEdit.clicked.connect(self.printPlainTextEdit)
         self.btn_clearPlainTextEdit.clicked.connect(self.clearPlainTextEdit)
-
-        #PlainTextEdit에 기능 연결
-        self.plaintextedit_Test.textChanged.connect(self.showPlainTextEdit)
+        self.btn_appendPlainText.clicked.connect(self.appendPlainText)
 
     #PlainTextEdit과 관련된 함수
     def printPlainTextEdit(self) :
@@ -23,9 +21,8 @@ class WindowClass(QMainWindow, form_class) :
     def clearPlainTextEdit(self) :
         self.plaintextedit_Test.clear()
 
-    def showPlainTextEdit(self) :
-        self.textBrowser.setText(self.plaintextedit_Test.toPlainText())
-
+    def appendPlainText(self) :
+        self.plaintextedit_Test.appendPlainText("Append Plain Text")
 
 if __name__ == "__main__" :
     app = QApplication(sys.argv)
