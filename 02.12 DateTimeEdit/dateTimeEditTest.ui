@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>513</width>
+    <height>531</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QTimeEdit" name="timeEdit">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>230</y>
+     <x>260</x>
+     <y>60</y>
      <width>118</width>
      <height>22</height>
     </rect>
@@ -26,20 +26,20 @@
   <widget class="QDateEdit" name="dateEdit">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>270</y>
+     <x>260</x>
+     <y>100</y>
      <width>121</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>20</y>
      <width>235</width>
-     <height>84</height>
+     <height>111</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -56,7 +56,13 @@
        </datetime>
       </property>
       <property name="currentSection">
-       <enum>QDateTimeEdit::YearSection</enum>
+       <enum>QDateTimeEdit::DaySection</enum>
+      </property>
+      <property name="displayFormat">
+       <string>dd/MM/yyyy h:m:s</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>false</bool>
       </property>
      </widget>
     </item>

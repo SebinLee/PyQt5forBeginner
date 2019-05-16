@@ -16,7 +16,6 @@ class WindowClass(QMainWindow, form_class) :
 
     - clearMaximumDate, DateTime, Time
     - clearMinumumDate, DateTime, Time
-    - currentSection()
 
     """
 
