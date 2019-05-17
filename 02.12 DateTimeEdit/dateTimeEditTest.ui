@@ -6,97 +6,271 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>513</width>
-    <height>531</height>
+    <width>410</width>
+    <height>439</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTimeEdit" name="timeEdit">
+  <widget class="QPushButton" name="btn_displayDateTime">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>60</y>
-     <width>118</width>
-     <height>22</height>
+     <x>280</x>
+     <y>140</y>
+     <width>91</width>
+     <height>41</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QDateEdit" name="dateEdit">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>100</y>
-     <width>121</width>
-     <height>22</height>
-    </rect>
+   <property name="text">
+    <string>Display Info</string>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QDateTimeEdit" name="dateTimeEdit_Test">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>20</y>
-     <width>235</width>
-     <height>111</height>
+     <y>40</y>
+     <width>261</width>
+     <height>31</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="maximumDateTime">
+    <datetime>
+     <hour>23</hour>
+     <minute>59</minute>
+     <second>59</second>
+     <year>6879</year>
+     <month>6</month>
+     <day>5</day>
+    </datetime>
+   </property>
+   <property name="minimumDateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2000</year>
+     <month>1</month>
+     <day>1</day>
+    </datetime>
+   </property>
+   <property name="currentSection">
+    <enum>QDateTimeEdit::DaySection</enum>
+   </property>
+   <property name="displayFormat">
+    <string>dd/MM/yyyy h:m:s</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>380</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>380</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_enterDateTime">
+   <property name="geometry">
+    <rect>
+     <x>274</x>
+     <y>248</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DateTime</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_dateTime">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>249</y>
+     <width>258</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DateTime</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_date">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>280</y>
+     <width>258</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Date</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_enterDate">
+   <property name="geometry">
+    <rect>
+     <x>274</x>
+     <y>279</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Date</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_time">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>258</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Time</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_enterTime">
+   <property name="geometry">
+    <rect>
+     <x>274</x>
+     <y>309</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Time</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>340</y>
+     <width>380</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_displayFormat">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>361</y>
+     <width>258</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Display Format</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_changeFormat">
+   <property name="geometry">
+    <rect>
+     <x>274</x>
+     <y>360</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ChangeFormat</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>261</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QDateTimeEdit" name="dateTimeEdit">
-      <property name="minimumDateTime">
-       <datetime>
-        <hour>0</hour>
-        <minute>0</minute>
-        <second>0</second>
-        <year>2000</year>
-        <month>1</month>
-        <day>1</day>
-       </datetime>
-      </property>
-      <property name="currentSection">
-       <enum>QDateTimeEdit::DaySection</enum>
-      </property>
-      <property name="displayFormat">
-       <string>dd/MM/yyyy h:m:s</string>
-      </property>
-      <property name="calendarPopup">
-       <bool>false</bool>
+     <widget class="QLabel" name="lbl_displayDateTime">
+      <property name="text">
+       <string>Display DateTime</string>
       </property>
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLabel" name="lbl_displayDateTime">
-        <property name="text">
-         <string>Display DateTime</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="btn_displayDateTime">
-        <property name="text">
-         <string>Display</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QLabel" name="lbl_displayDate">
+      <property name="text">
+       <string>Display Date</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLineEdit" name="line_setDateTime"/>
-      </item>
-      <item>
-       <widget class="QPushButton" name="btn_setDateTime">
-        <property name="text">
-         <string>Set</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QLabel" name="lbl_displayTime">
+      <property name="text">
+       <string>Display Time</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>400</y>
+     <width>361</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="btn_showRange">
+      <property name="text">
+       <string>ShowRange</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_editMaximum">
+      <property name="text">
+       <string>Edit Maximum</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_editMinimum">
+      <property name="text">
+       <string>Edit Minimum</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
