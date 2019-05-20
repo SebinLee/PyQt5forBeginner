@@ -9,32 +9,69 @@ class WindowClass(QMainWindow, form_class) :
     def __init__(self) :
         super().__init__()
         self.setupUi(self)
+
+        self.currentDateTime = QDateTime.currentDateTime()
+        self.dateTimeEdit_Test.setDateTime(self.currentDateTime)
+
+
         self.btn_displayDateTime.clicked.connect(self.displayDateTime)
-        self.dateTimeEdit.dateChanged.connect(self.printFunc)
+        self.btn_enterDateTime.clicked.connect(self.enterDateTimeFunc)
+        self.btn_enterDate.clicked.connect(self.enterDateFunc)
+        self.btn_enterTime.clicked.connect(self.enterTimeFunc)
+
+        self.btn_changeFormat.clicked.connect(self.changeDisplayFormat)
+
+        self.btn_showRange.clicked.connect(self.showRangeFunc)
+
+        """
+        self.btn_editMaximum.clicked.connect(self.extendMaximum)
+        self.btn_editMinimum.clicked.connect(self.extendMinimum)
+        """
+
 
     def displayDateTime(self) :
+        self.displayDateTimeVar = self.dateTimeEdit_Test.dateTime()
+        self.displayDateVar = self.dateTimeEdit_Test.date()
+        self.displayTimeVar = self.dateTimeEdit_Test.time()
 
-        """
-        minDateTimeVar = QDateTime.currentDateTime()
-        maxDateTimeVar = QDateTime.currentDateTime()
-        maxDateTimeVar = maxDateTimeVar.addDays(100)
+        self.lbl_displayDateTime.setText(self.displayDateTimeVar.toString("yyyy-MM-dd AP hh:mm:ss"))
+        self.lbl_displayDate.setText(self.displayDateVar.toString("yyyy-MM-dd"))
+        self.lbl_displayTime.setText(self.displayTimeVar.toString("AP hh:mm:ss"))
 
-        self.dateTimeEdit.setDateTimeRange(minDateTimeVar, maxDateTimeVar)
-        print(self.dateTimeEdit.minimumDate())
-        print(self.dateTimeEdit.maximumDate())
+    def enterDateTimeFunc(self) :
+        self.enterDateTimeText = self.line_dateTime.text()
+        self.enterDateTimeVar = QDateTime.fromString(self.enterDateTimeText, "yyyy-MM-dd AP hh:mm:ss")
+        self.dateTimeEdit_Test.setDateTime(self.enterDateTimeVar)
 
-        self.dateTimeEdit.clearMaximumDateTime()
-        self.dateTimeEdit.clearMinimumDateTime()
-        print(self.dateTimeEdit.maximumDateTime())
-        print(self.dateTimeEdit.minimumDateTime())
-        """
+    def enterDateFunc(self) :
+        self.enterDateText = self.line_date.text()
+        self.enterDateVar = QDate.fromString(self.enterDateText, "yyyy-MM-dd")
+        self.dateTimeEdit_Test.setDate(self.enterDateVar)
 
-        if self.dateTimeEdit.calendarPopup() : self.dateTimeEdit.setCalendarPopup(False)
-        else  : self.dateTimeEdit.setCalendarPopup(True)
+    def enterTimeFunc(self) :
+        self.enterTimeText = self.line_time.text()
+        self.enterTimeVar = QTime.fromString(self.enterTimeText, "AP hh:mm:ss")
+        self.dateTimeEdit_Test.setTime(self.enterTimeVar)
+    
+    def changeDisplayFormat(self) :
+        self.displayFormatText = self.line_displayFormat.text()
+        self.dateTimeEdit_Test.setDisplayFormat(self.displayFormatText)
 
-    def printFunc(self) :
-        print("DateChanged")
-        
+    def showRangeFunc(self) :
+        print(self.dateTimeEdit_Test.minimumDateTime())
+        print(self.dateTimeEdit_Test.maximumDateTime())
+
+    """
+    def extendMaximum(self) :
+        self.currentMaximumDateTime = self.dateTimeEdit_Test.maximumDateTime()
+        self.currentMaximumDateTime = self.currentMaximumDateTime.addDays(10)
+        self.dateTimeEdit_Test.setMinimumDateTime(self.currentMaximumDateTime)
+
+    def extendMinimum(self) :
+        self.currentMinimumDateTime = self.dateTimeEdit_Test.minimumDateTime()
+        self.currentMinimumDateTime = self.currentMinimumDateTime.addDays(-10)
+        self.dateTimeEdit_Test.setMinimumDateTime(self.currentMinimumDateTime)
+    """
 
 if __name__ == "__main__" :
     app = QApplication(sys.argv)
