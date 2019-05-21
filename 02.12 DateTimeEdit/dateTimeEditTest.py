@@ -10,30 +10,28 @@ class WindowClass(QMainWindow, form_class) :
         super().__init__()
         self.setupUi(self)
 
+        #프로그램이 실행되면 DateTimeEdit의 값이 현재 날짜/시간으로 설정되게 하기
         self.currentDateTime = QDateTime.currentDateTime()
         self.dateTimeEdit_Test.setDateTime(self.currentDateTime)
 
-
+        #버튼들에 기능 할당
         self.btn_displayDateTime.clicked.connect(self.displayDateTime)
         self.btn_enterDateTime.clicked.connect(self.enterDateTimeFunc)
         self.btn_enterDate.clicked.connect(self.enterDateFunc)
         self.btn_enterTime.clicked.connect(self.enterTimeFunc)
-
         self.btn_changeFormat.clicked.connect(self.changeDisplayFormat)
-
         self.btn_showRange.clicked.connect(self.showRangeFunc)
-
-        """
         self.btn_editMaximum.clicked.connect(self.extendMaximum)
         self.btn_editMinimum.clicked.connect(self.extendMinimum)
-        """
-
 
     def displayDateTime(self) :
+        #DateTimeEdit의 값을 사용할 때는 아래와 같이 객체를 만들고, 그 객체에 값을 저장한 후 사용해야 합니다.
         self.displayDateTimeVar = self.dateTimeEdit_Test.dateTime()
         self.displayDateVar = self.dateTimeEdit_Test.date()
         self.displayTimeVar = self.dateTimeEdit_Test.time()
 
+        #QDateTime, QDate, QTime 객체들의 값을 Label에 표시합니다.
+        #toString 함수는 02.12QDateTimeEdit의 하위페이지에 있는 QDateTime, QDate, QTime 함수를 참고하시기 바랍니다.
         self.lbl_displayDateTime.setText(self.displayDateTimeVar.toString("yyyy-MM-dd AP hh:mm:ss"))
         self.lbl_displayDate.setText(self.displayDateVar.toString("yyyy-MM-dd"))
         self.lbl_displayTime.setText(self.displayTimeVar.toString("AP hh:mm:ss"))
@@ -61,17 +59,15 @@ class WindowClass(QMainWindow, form_class) :
         print(self.dateTimeEdit_Test.minimumDateTime())
         print(self.dateTimeEdit_Test.maximumDateTime())
 
-    """
     def extendMaximum(self) :
         self.currentMaximumDateTime = self.dateTimeEdit_Test.maximumDateTime()
         self.currentMaximumDateTime = self.currentMaximumDateTime.addDays(10)
-        self.dateTimeEdit_Test.setMinimumDateTime(self.currentMaximumDateTime)
+        self.dateTimeEdit_Test.setMaximumDateTime(self.currentMaximumDateTime)
 
     def extendMinimum(self) :
         self.currentMinimumDateTime = self.dateTimeEdit_Test.minimumDateTime()
         self.currentMinimumDateTime = self.currentMinimumDateTime.addDays(-10)
         self.dateTimeEdit_Test.setMinimumDateTime(self.currentMinimumDateTime)
-    """
 
 if __name__ == "__main__" :
     app = QApplication(sys.argv)
