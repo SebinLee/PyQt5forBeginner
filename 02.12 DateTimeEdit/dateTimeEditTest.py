@@ -37,21 +37,28 @@ class WindowClass(QMainWindow, form_class) :
         self.lbl_displayTime.setText(self.displayTimeVar.toString("AP hh:mm:ss"))
 
     def enterDateTimeFunc(self) :
+        #LineEdit에서 글자를 가져온 후, fromString 함수를 이용해서 QDateTime객체를 만듭니다.
+        #그 후, setDateTime 함수를 이용해 DateTimeEdit에 적용합니다.
         self.enterDateTimeText = self.line_dateTime.text()
         self.enterDateTimeVar = QDateTime.fromString(self.enterDateTimeText, "yyyy-MM-dd AP hh:mm:ss")
         self.dateTimeEdit_Test.setDateTime(self.enterDateTimeVar)
 
     def enterDateFunc(self) :
+        #LineEdit에서 글자를 가져온 후, fromString 함수를 이용해서 QDate객체를 만듭니다.
+        #그 후, setDate 함수를 이용해 DateTimeEdit에 적용합니다.
         self.enterDateText = self.line_date.text()
         self.enterDateVar = QDate.fromString(self.enterDateText, "yyyy-MM-dd")
         self.dateTimeEdit_Test.setDate(self.enterDateVar)
 
     def enterTimeFunc(self) :
+        #LineEdit에서 글자를 가져온 후, fromString 함수를 이용해서 QTime객체를 만듭니다.
+        #그 후, setTime 함수를 이용해 DateTimeEdit에 적용합니다.
         self.enterTimeText = self.line_time.text()
         self.enterTimeVar = QTime.fromString(self.enterTimeText, "AP hh:mm:ss")
         self.dateTimeEdit_Test.setTime(self.enterTimeVar)
     
     def changeDisplayFormat(self) :
+        #LineEdit에서 글자를 가져온 후, 그 글자를 DateTimeEdit의 형식문자로 지정합니다.
         self.displayFormatText = self.line_displayFormat.text()
         self.dateTimeEdit_Test.setDisplayFormat(self.displayFormatText)
 
@@ -60,14 +67,19 @@ class WindowClass(QMainWindow, form_class) :
         print(self.dateTimeEdit_Test.maximumDateTime())
 
     def extendMaximum(self) :
+        #DateTimeEdit의 현재 maximumDateTime을 가져옵니다.
+        #그 후 addDays 함수를 이용하여 최댓값을 10일 연장시킨 후, setMaximumDateTime을 이용하여 DateTimeEdit에 적용시킵니다.
         self.currentMaximumDateTime = self.dateTimeEdit_Test.maximumDateTime()
         self.currentMaximumDateTime = self.currentMaximumDateTime.addDays(10)
         self.dateTimeEdit_Test.setMaximumDateTime(self.currentMaximumDateTime)
 
     def extendMinimum(self) :
+        #DateTimeEdit의 현재 minimumDateTime을 가져옵니다.
+        #그 후 addDays 함수를 이용하여 최솟값을 10일 뒤로 미룬 후, setMinimumDateTime을 이용하여 DateTimeEdit에 적용시킵니다.
         self.currentMinimumDateTime = self.dateTimeEdit_Test.minimumDateTime()
         self.currentMinimumDateTime = self.currentMinimumDateTime.addDays(-10)
         self.dateTimeEdit_Test.setMinimumDateTime(self.currentMinimumDateTime)
+
 
 if __name__ == "__main__" :
     app = QApplication(sys.argv)
