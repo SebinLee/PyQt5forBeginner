@@ -13,7 +13,7 @@ class WindowClass(QMainWindow, form_class) :
         #QCalendarWidget의 시그널
         self.calendarWidget_Test.clicked.connect(self.calendarClicked)
         self.calendarWidget_Test.currentPageChanged.connect(self.calendarPageChanged)
-        self.calendarWidget_Test.selectionChanged.connect(self.calendarSelectionChanged)
+        self.calendarWidget_Test.selectionChanged.connect(self.calendarSelectionChanged)        
 
         #QCalendarWidget이 자동으로 오늘 날짜가 있는 달력을 보여주게 설정
         self.todayDate = QDate.currentDate()
