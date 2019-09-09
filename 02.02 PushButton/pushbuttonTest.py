@@ -11,6 +11,7 @@ class WindowClass(QMainWindow, form_class) :
     def __init__(self) :
         super().__init__()
         self.setupUi(self)
+        #test
 
         self.btn_1.clicked.connect(self.button1Function)
         self.btn_2.clicked.connect(self.button2Function)
